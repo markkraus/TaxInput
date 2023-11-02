@@ -3,6 +3,8 @@ import java.util.Scanner; // import the Scanner class to gain access to make our
 
 public class TaxInput {
   public static void main(String[] args) {
+    System.out.print("Enter your name income and 401k contribution on the same line separated by an empty space i.e. mike 12000 2500: ");
+
     Scanner keyboard = new Scanner(System.in); // keyboard is now how we will prompt for input
     String userName;
     double income,taxable,retire,ftax,stax,ltax,ptax,takehome; // these are the variables you will need to set or calculate
@@ -19,8 +21,6 @@ public class TaxInput {
     ptax = taxable * .062;
     //calc takehome (taxable - all the taxes)
     takehome = taxable - (ftax + stax + ltax + ptax);
-    // Enter username and press Enter
-    System.out.print("Enter your name income and 401k contribution on the same line separated by an empty space i.e. mike 12000 2500: ");
 
 
     System.out.println("Taxpayer name is: " + userName);
